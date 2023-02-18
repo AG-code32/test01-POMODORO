@@ -81,7 +81,7 @@ function startButtonHandler(id){
     console.log(taskIndex);
 
     taskName.textContent = tasks[taskIndex].title;
-
+    renderTime();
     timer = setInterval(() => {
         timerHandler(id);
     }, 1000);
@@ -104,6 +104,7 @@ function timerHandler(id){
 function startBreak() {
     time = 3;
     taskName.textContent = 'Break';
+    renderTime();
     timerBreak = setInterval(() => {
         timerBreakHandler();
     }, 1000);
